@@ -3,4 +3,6 @@ before_install:
 language: python
 python:
 - '3.6'
-script: "no tests"
+script:
+- black --check .
+- no tests
