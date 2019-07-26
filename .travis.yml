@@ -13,4 +13,4 @@ matrix:
 script:
 - $TEST_CMD
 - $TEST_SECOND_CMD
-- echo "No tests"
+- echo "No tests are there"
