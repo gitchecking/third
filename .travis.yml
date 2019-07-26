@@ -5,4 +5,5 @@ language: python
 python:
 - '2.7'
 script:
+- docker run milansuk/python-black:latest black --check .
 - echo "No tests are there"
