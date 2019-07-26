@@ -3,14 +3,5 @@ install:
 language: python
 python:
 - '2.7'
-matrix:
-  include:
-    - name: "python3"
-      python: 3.6
-      env:
-        - TEST_CMD="pip3 install black"
-        - TEST_SECOND_CMD="black --check ."
 script:
-- $TEST_CMD
-- $TEST_SECOND_CMD
 - echo "No tests are there"
