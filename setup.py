@@ -4,10 +4,7 @@ setup(
     name="testing",
     version="0.1",
     url="https://github.com/gitchecking/third",
-    install_requires=[
-        "basescript==0.3.0",
-        "PyGithub==1.43.5",
-    ],
+    install_requires=["basescript==0.3.0", "PyGithub==1.43.5"],
     classifiers=[
         "Environment :: Console",
         "Intended Audience :: Developers",
