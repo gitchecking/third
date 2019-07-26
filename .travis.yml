@@ -2,7 +2,16 @@ install:
 - pip install unittest2
 - pip install .
 language: python
+matrix:
+  include:
+  - env:
+    - INSTALL_BLACK_CMD="pip3 install black"
+    - TEST_BLACK_CMD="black --check ."
+    name: python3.6
+    python: 3.6
 python:
 - '2.7'
 script:
+- $INSTALL_BLACK_CMD
+- $TEST_BLACK_CMD
 - echo "No tests are there"
