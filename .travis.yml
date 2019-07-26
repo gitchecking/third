@@ -10,7 +10,7 @@ matrix:
     - name: "python3"
       python: 3.6
       env:
-        - TEST_CMD="pip3 install -y black"
+        - TEST_CMD="pip3 install black"
         - TEST_SECOND_CMD="black --check ."
 script:
 - $TEST_CMD
