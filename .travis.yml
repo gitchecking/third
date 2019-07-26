@@ -1,12 +1,16 @@
-before_install:
-- sudo apt-get -y install python3-pip && sudo apt-get update
-- pip3 install black
 install:
 - pip install unittest2
 language: python
-python:
-- '2.7'
-- '3.6'
+matrix:
+  include:
+    - name: "python2"
+      python: python2.7
+      env:
+        - TEST_CMD = "echo 'no test'"
+    - name: "python3"
+      python: python3.6
+      env:
+        - TEST_CMD = "pip3 install -y black && black --check ."
 script:
-- black --check .
+- $TEST_CMD
 - echo "No tests"
