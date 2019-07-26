@@ -1,12 +1,10 @@
 install:
 - pip install unittest2
 language: python
+python:
+- '2.7'
 matrix:
   include:
-    - name: "python2"
-      python: 2.7
-      env:
-        - TEST_CMD = "echo 'no test'"
     - name: "python3"
       python: 3.6
       env:
