@@ -3,6 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name="testing",
     version="0.1",
+    packages=["third"]
     url="https://github.com/gitchecking/third",
     install_requires=[
         "basescript==0.3.0",
