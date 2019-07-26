@@ -4,11 +4,11 @@ language: python
 matrix:
   include:
     - name: "python2"
-      python: python2.7
+      python: 2.7
       env:
         - TEST_CMD = "echo 'no test'"
     - name: "python3"
-      python: python3.6
+      python: 3.6
       env:
         - TEST_CMD = "pip3 install -y black && black --check ."
 script:
