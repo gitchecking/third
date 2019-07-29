@@ -1,10 +1,8 @@
-before_install:
-- pip3 install black
 install:
 - pip install .
 language: python
 python:
 - '2.7'
 script:
-- black --check .
+- docker run -v $(pwd):/app deepcompute/black:python-black-latest --check .
 - python setup.py test
