@@ -3,8 +3,7 @@ install:
 - pip3 install black
 language: python
 python:
-- '3.7'
+- '2.7'
 script:
 - docker run -v $(pwd):/app deepcompute/black:python-black-latest --check .
 - python setup.py test
-- black --check .
